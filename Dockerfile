@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install --no-install-recommends -fy \
     make && \
     make logos-all && \
     make install && \
+    apt-get remove build-essential wget gettext && \
     apt-get autoclean -y && \
     apt-get clean -y && \
     apt-get autoremove -y && \
